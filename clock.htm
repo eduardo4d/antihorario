@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Flu's Clock</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./clock/LCG.css">
+        <link rel="stylesheet" href="./clock/style.css">
+        
+        <style>
+            
+        </style>
+    </head>
+
+    <body>
+        <p id="flu">
+            <a href="http://www.fluminense.com.br/site/">Fluminense Futebol Clube</a>
+            <sub style="font-size: small">
+                <a href="https://krotalias.github.io/cg/downloads/PDFs/04_LCG_Window-Viewport.pdf">[1]</a>
+                <a href="https://krotalias.github.io/python/laboratorios2.html#8c">[2]</a>
+                <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">
+                    [3]
+                </a>
+            </sub>
+        </p>
+
+        <div id="container">
+            <canvas id="clock" width="512" height="512">
+                Please upgrade your browser.
+            </canvas>
+            <canvas id="handles" width="512" height="512">
+                Please upgrade your browser.
+            </canvas>
+        </div>
+        <br>
+        <p>
+            <audio title="Hino do Fluminense" controls="" loop="">
+                <source src="hino-fluminense-fc.mp3" type="audio/mpeg">
+                Please upgrade your browser!
+            </audio>
+
+            <small>
+                Hino do Fluminense FC por
+                <a href="https://vejario.abril.com.br/cidade/curiosidades-hinos-times-cariocas/">
+                    Lamartine Babo (1949).
+                </a>
+            </small>
+        </p>
+        <p>
+            <iframe title="O elástico de Rivelino" width="320" height="240" src="./Flu&#39;s Clock_files/jt7ebGO6ILg.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+            </iframe>
+            <br>
+            <small id="Rivelino">
+                Elástico de Rivelino
+                <a href="https://www.youtube.com/watch?v=jt7ebGO6ILg">
+                    10/06/1975
+                </a>
+            (há 48 anos atrás)</small>
+            <br>
+            <small id="Renato">
+                Gol de barriga do Renato
+                <a href="https://www.youtube.com/watch?v=CrIFGVYuq6c">
+                    25/06/1995
+                </a>
+            (há 28 anos atrás)</small>
+            <br>
+            <small id="Cano">
+                Golaço de Cano do meio de campo
+                <a href="https://www.youtube.com/watch?v=UA-HwS766Hw">
+                    12/02/2023
+                </a>
+            (há 0 anos atrás)</small>
+        </p>
+
+        <script src="./clock/suncalc.js.download"></script>
+        <script src="./clock/clock.js.download"></script>
+        <script src="./clock/date.js.download"></script>
+        <script>
+            document.querySelector(
+                "#Rivelino"
+            ).innerHTML += `(há ${elapsedYears("1975-06-10")} anos atrás)`;
+            document.querySelector("#Renato").innerHTML += `(há ${elapsedYears(
+                "1995-06-25"
+            )} anos atrás)`;
+            document.querySelector("#Cano").innerHTML += `(há ${elapsedYears(
+                "2023-02-12"
+            )} anos atrás)`;
+        </script>
+    
+
+</body></html>
