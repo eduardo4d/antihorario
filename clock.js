@@ -234,7 +234,7 @@ function arc(center, radius, t1, t2, fill = true) {
   });
 
   context.beginPath();
-  context.arc(center[0], center[1], radius, arcInit, arcEnd);
+  context.arc(center[0], center[1], radius, pi - arcInit, pi - arcEnd);
   if (fill) context.fill();
   else context.stroke();
 }
