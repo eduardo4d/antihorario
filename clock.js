@@ -230,7 +230,7 @@ function circle(center, radius, fill = true) {
 function arc(center, radius, t1, t2, fill = true) {
   let [arcInit, arcEnd] = [t1, t2].map((t) => {
     let [hour, minutes] = t.split(":").map((q) => Number(q));
-    return 0.5 * (fiveMin * (hour + minutes / 60) - pi);
+    return - 0.5 * (fiveMin * (hour + minutes / 60) - pi);
   });
 
   context.beginPath();
@@ -477,7 +477,7 @@ var runAnimation = (() => {
     { width: 2, length: 0.9, c: orange },
     { width: 1, length: 0.95, c: white3 },
   ];
-  const oneMin = - pi / 30; // - 6 degrees
+  const oneMin = pi / 30; // 6 degrees
   let timer = null;
 
   const queryString = window.location.search;
@@ -517,10 +517,10 @@ var runAnimation = (() => {
     // 12 hours format: AM / PM
     let hours12 = hours % 12 || 12;
 
-    clock_handles[0].time2Angle = fiveMin * (-hours12 - minutes / 60);
-    clock_handles[1].time2Angle = oneMin * (-minutes - seconds / 60);
-    clock_handles[2].time2Angle = oneMin * seconds;
-    clock_handles[3].time2Angle = fiveMin * (-hours - minutes / 60) * 0.5;
+    clock_handles[0].time2Angle = - fiveMin * (+hours12 + minutes / 60);
+    clock_handles[1].time2Angle = - oneMin * (+minutes + seconds / 60);
+    clock_handles[2].time2Angle = - oneMin * seconds;
+    clock_handles[3].time2Angle = - fiveMin * (+hours + minutes / 60) * 0.5;
 
     // Clear screen.
     ctx.clearRect(0, 0, canvas.width, canvas.height);
