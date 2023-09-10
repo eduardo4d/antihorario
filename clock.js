@@ -230,11 +230,11 @@ function circle(center, radius, fill = true) {
 function arc(center, radius, t1, t2, fill = true) {
   let [arcInit, arcEnd] = [t1, t2].map((t) => {
     let [hour, minutes] = t.split(":").map((q) => Number(q));
-    return 0.5 * (- fiveMin * (hour + minutes / 60) - pi);
+    return 0.5 * (fiveMin * (hour + minutes / 60) - pi);
   });
 
   context.beginPath();
-  context.arc(center[0], center[1], radius, arcInit, arcEnd);
+  context.arc(center[0], center[1], radius, arcEnd, arcInit);
   if (fill) context.fill();
   else context.stroke();
 }
