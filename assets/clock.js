@@ -454,8 +454,10 @@ drawClock.decimals = Array.from(Array(24), (_, i) => {
   return { txt: String(i), c: white2 };
 });
 drawClock.decimals[0].txt = "24";
-//drawClock.decimals[6].c = white3;
-//drawClock.decimals[18].c = white3;
+/*
+drawClock.decimals[6].c = white3;
+drawClock.decimals[18].c = white3;
+*/
 
 /**
  * A closure to run the animation.
