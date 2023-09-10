@@ -245,7 +245,7 @@ function arc(center, radius, t1, t2, fill = true) {
  * @returns {Object} array of city coordinates.
  */
 async function readZones() {
-  const requestURL = `${location.protocol}/cwdc/10-html5css3/clock/localtime.json`;
+  const requestURL = `localtime.json`;
   const request = new Request(requestURL);
 
   const response = await fetch(request);
