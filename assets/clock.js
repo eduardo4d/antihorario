@@ -245,7 +245,7 @@ function arc(center, radius, t1, t2, fill = true) {
  * @returns {Object} array of city coordinates.
  */
 async function readZones() {
-  const requestURL = `localtime.json`;
+  const requestURL = `../assets/localtime.json`;
   const request = new Request(requestURL);
 
   const response = await fetch(request);
@@ -278,7 +278,7 @@ function drawClock(place) {
     context.drawImage(img, coord.x, coord.y, size[0], size[1]);
 
     const logo = new Image();
-    logo.src = "logo.svg";
+    logo.src = "../assets/logo.svg";
     logo.decode().then(() => {
       // Translate the center of the logo
       // to the center of the canvas.
