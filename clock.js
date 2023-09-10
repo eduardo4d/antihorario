@@ -477,7 +477,7 @@ var runAnimation = (() => {
     { width: 2, length: 0.9, c: orange },
     { width: 1, length: 0.95, c: white3 },
   ];
-  const oneMin = pi / 30; // 6 degrees
+  const oneMin = - pi / 30; // - 6 degrees
   let timer = null;
 
   const queryString = window.location.search;
