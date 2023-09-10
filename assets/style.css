@@ -27,6 +27,6 @@ canvas {
     z-index: 2;
 }
 #clock {
-    background: linear-gradient(0deg, rgba(240,240,246,1) 0%, rgb(255, 255, 255) 100%);
+    background: linear-gradient(0deg, rgba(240,246,250,1) 0%, rgb(255, 255, 255) 100%);
     z-index: 1;
 }
