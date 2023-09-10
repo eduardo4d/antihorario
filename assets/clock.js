@@ -269,7 +269,7 @@ function drawClock(place) {
   // Browsers first loads a compressed version of image, then decodes it, finally paints it.
   // Draw the logo.
   const img = new Image();
-  img.src = "./rolex_bezel.png";
+  img.src = "./assets/rolex_bezel.png";
   img.decode().then(() => {
     // Translate the center of the logo
     // to the center of the canvas.
@@ -278,7 +278,7 @@ function drawClock(place) {
     context.drawImage(img, coord.x, coord.y, size[0], size[1]);
 
     const logo = new Image();
-    logo.src = "./logo.svg";
+    logo.src = "./assets/logo.svg";
     logo.decode().then(() => {
       // Translate the center of the logo
       // to the center of the canvas.
@@ -454,8 +454,11 @@ drawClock.decimals = Array.from(Array(24), (_, i) => {
   return { txt: String(i), c: white2 };
 });
 drawClock.decimals[0].txt = "24";
+
+/*
 drawClock.decimals[6].c = white3;
 drawClock.decimals[18].c = white3;
+*/
 
 /**
  * A closure to run the animation.
