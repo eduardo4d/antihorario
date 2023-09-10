@@ -432,18 +432,18 @@ function drawClock(place) {
  * @member {Array<{txt: String, c: color}>} roman clock numbers.
  */
 drawClock.romans = [
-  { txt: "XII", c: white1 },
-  { txt: "I", c: white1 },
-  { txt: "II", c: white1 },
-  { txt: "III", c: grena },
-  { txt: "IV", c: white1 },
-  { txt: "V", c: white1 },
-  { txt: "VI", c: white1 },
-  { txt: "VII", c: white1 },
-  { txt: " VIII", c: white1 },
-  { txt: "IX", c: grena },
-  { txt: "X", c: white1 },
-  { txt: "XI", c: white1 },
+  { txt: "XII", c: cwhite1 },
+  { txt: "I", c: cwhite1 },
+  { txt: "II", c: cwhite1 },
+  { txt: "III", c: cgrena },
+  { txt: "IV", c: cwhite1 },
+  { txt: "V", c: cwhite1 },
+  { txt: "VI", c: cwhite1 },
+  { txt: "VII", c: cwhite1 },
+  { txt: " VIII", c: cwhite1 },
+  { txt: "IX", c: cgrena },
+  { txt: "X", c: cwhite1 },
+  { txt: "XI", c: cwhite1 },
 ];
 
 /**
@@ -454,8 +454,8 @@ drawClock.decimals = Array.from(Array(24), (_, i) => {
   return { txt: String(i), c: white2 };
 });
 drawClock.decimals[0].txt = "24";
-drawClock.decimals[6].c = white3;
-drawClock.decimals[18].c = white3;
+//drawClock.decimals[6].c = white3;
+//drawClock.decimals[18].c = white3;
 
 /**
  * A closure to run the animation.
